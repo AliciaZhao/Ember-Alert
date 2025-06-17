@@ -36,7 +36,7 @@ sdk.dir=C:\Users\YourUsername\AppData\Local\Android\Sdk
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 ### 1. Start Metro bundler
 
