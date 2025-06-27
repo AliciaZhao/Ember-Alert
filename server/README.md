@@ -1,6 +1,6 @@
 ## Setup
 ### 1. Create and Run The Scheduler Application First
-- [Ember Alert Scheduler](https://github.com/Carlosq-mv/scheduler)
+- [Ember Alert Scheduler](https://github.com/AliciaZhao/Ember-Alert/blob/scheduler/scheduler/README.md)
 > The scheduler populates the database used for the main server & you need the database to be running for this to work.
 
 ## 2. Change into Server Directory
