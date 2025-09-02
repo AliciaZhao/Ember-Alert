@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, SafeAreaView, StyleSheet } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 import TopBar from '../components/TopBar';
 
 export default function HomeScreen() {
@@ -7,14 +8,35 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.screen}>
       <TopBar />
       <View style={styles.container}>
-        <Text style={styles.text}>[ Map will go here ]</Text>
+        <MapView
+          style={styles.map}
+          initialRegion={{
+            latitude: 37.3541,
+            longitude: -121.9552,
+            latitudeDelta: 0.1,
+            longitudeDelta: 0.1,
+          }}
+        >
+          <Marker
+            coordinate={{ latitude: 37.3541, longitude: -121.9552 }}
+            title="Santa Clara"
+            description="You are here"
+          />
+        </MapView>
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: '#eef' },
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 18 },
+  screen: {
+    flex: 1,
+    backgroundColor: '#eef',
+  },
+  container: {
+    flex: 1,
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
 });
